@@ -1,4 +1,5 @@
 # PSUSphere
+# PsuSphere
 
 ## Project Description
 PSUSphere is a web-based Django application designed to manage student organizations within the university.  
