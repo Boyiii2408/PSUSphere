@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Colleges</h4>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">List of Colleges</div>
+                <a href="{% url 'college-add' %}" class="btn btn-success btn-sm float-right">
+                    Add College
+                </a>
+            </div>
+
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for obj in object_list %}
+                        <tr>
+                            <td>{{ obj.name }}</td>
+                            <td>
+                                <a href="{% url 'college-edit' obj.pk %}">Edit</a> |
+                                <a href="{% url 'college-delete' obj.pk %}">Delete</a>
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="2">No colleges found.</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
