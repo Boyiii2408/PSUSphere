@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row">
+
+    <div class="col-md-4">
+        <div class="card card-stats card-primary">
+            <div class="card-body">
+                <p class="card-category">Students</p>
+                <h4 class="card-title">{{ total_students }}</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card card-stats card-success">
+            <div class="card-body">
+                <p class="card-category">Organizations</p>
+                <h4 class="card-title">{{ total_organizations }}</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card card-stats card-warning">
+            <div class="card-body">
+                <p class="card-category">Programs</p>
+                <h4 class="card-title">{{ total_programs }}</h4>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

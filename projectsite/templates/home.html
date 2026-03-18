@@ -1,18 +1,49 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
-<div class="content">
-    <div class="container-fluid">
-        <h4 class="page-title">Home</h4>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">Page Title</div>
-                        <div class="card-category">Page Subtitle</div>
-                    </div>
-                    <div class="card-body">Hello, world!</div>
-                </div>
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3 class="mb-4">Dashboard</h3>
+
+<div class="row">
+
+
+    <div class="col-md-4">
+        <div class="card bg-primary text-white card-dashboard">
+            <div class="card-body">
+                <h5>Total Students</h5>
+                <h2>{{ total_students }}</h2>
             </div>
         </div>
     </div>
+
+
+    <div class="col-md-4">
+        <div class="card bg-success text-white card-dashboard">
+            <div class="card-body">
+                <h5>Organizations</h5>
+                <h2>{{ total_organizations }}</h2>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-4">
+        <div class="card bg-warning text-white card-dashboard">
+            <div class="card-body">
+                <h5>Programs</h5>
+                <h2>{{ total_programs }}</h2>
+            </div>
+        </div>
+    </div>
+
 </div>
+
+
+<div class="card mt-4">
+    <div class="card-body">
+        <h5>Welcome to PSUSphere 🎉</h5>
+        <p>Manage students, organizations, and programs using the sidebar.</p>
+    </div>
+</div>
+
 {% endblock %}
